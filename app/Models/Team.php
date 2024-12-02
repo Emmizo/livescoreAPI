@@ -22,4 +22,8 @@ class Team extends Model
     {
         return $this->hasMany(Fixture::class, 'away_team_id');
     }
+    public function scores()
+{
+    return $this->hasMany(Score::class);
+}
 }

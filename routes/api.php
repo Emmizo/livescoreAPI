@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/livescore', [LiveScoreController::class, 'index']);
 Route::post('/livescoreCreate', [LiveScoreController::class, 'create']);
+Route::get('/events', [LiveScoreController::class,'getFixturesWithScores']);

@@ -51,7 +51,16 @@ return response()->json($formattedFixtures);
     {
         //
     }
+public function getFixturesWithScores()
+{
+    $fixtures = Fixture::with([
+        'homeTeam',
+        'awayTeam',
+        'scores.team'
+    ])->get();
 
+    return response()->json($fixtures);
+}
     /**
      * Display the specified resource.
      */
